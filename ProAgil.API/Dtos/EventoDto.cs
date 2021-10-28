@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -10,7 +11,7 @@ namespace ProAgil.API.Dtos
         [Required(ErrorMessage = "{0} é obrigatório")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "{0} precisa ter entre 3 e 100 caracteres")]
         public string Local { get; set; }
-        public string DataEvento { get; set; }
+        public DateTime DataEvento { get; set; }
 
         [Required (ErrorMessage = "{0} é obrigatório")]
         public string Tema { get; set; }
